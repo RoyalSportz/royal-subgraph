@@ -9,6 +9,6 @@ type EnteredContest @entity {
   player: Bytes! #address
   timestamp: BigInt!
   amount: BigInt!
-  team: [BigInt]!
+  team: [BigInt!]!
   matchAddress: String! #address
 }

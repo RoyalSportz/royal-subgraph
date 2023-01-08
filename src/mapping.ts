@@ -51,7 +51,10 @@ export function handleEnterContest(event: EnterContest): void {
   entity.player = event.params.player;
   entity.amount = event.params.amount;
   entity.timestamp = event.block.timestamp;
-  entity.team = event.params.team;
+  // This will work
+  let team = entity.team;
+  team.push(BigInt.fromI32(1));
+  entity.team = team;
   entity.matchAddress = event.address.toHexString();
   // Entity fields can be set based on event parameters
 

@@ -7,7 +7,8 @@
     "deploy": "graph deploy --node https://api.thegraph.com/deploy/ RoyalSportz/matches",
     "create-local": "graph create --node http://localhost:8020/ RoyalSportz/matches",
     "remove-local": "graph remove --node http://localhost:8020/ RoyalSportz/matches",
-    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 RoyalSportz/matches"
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 RoyalSportz/matches",
+    "deploy:polygon": "npm run codegen; npm run build; graph deploy --product hosted-service royalsportz/matches"
   },
   "dependencies": {
     "@graphprotocol/graph-cli": "0.21.1",
