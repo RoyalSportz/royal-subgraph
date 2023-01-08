@@ -10,5 +10,5 @@ type EnteredContest @entity {
   timestamp: BigInt!
   amount: BigInt!
   matchAddress: String! #address
-  # team: [BigInt!]!
+  team: [BigInt!]!
 }
