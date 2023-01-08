@@ -1,0 +1,14 @@
+type Match @entity {
+  id: ID!
+  matchAddress: Bytes! # address
+  timestamp: BigInt!
+}
+
+type EnteredContest @entity {
+  id: ID!
+  player: Bytes! #address
+  timestamp: BigInt!
+  amount: BigInt!
+  team: [BigInt]!
+  matchAddress: String! #address
+}
