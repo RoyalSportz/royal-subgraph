@@ -32,7 +32,7 @@ templates:
       kind: ethereum/events
       apiVersion: 0.0.4
       language: wasm/assemblyscript
-      file: ./src/mapping.ts
+      file: ./src/core.ts
       entities:
         - EnterContest
       abis:
