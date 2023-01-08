@@ -1,10 +1,7 @@
 import { BigInt } from '@graphprotocol/graph-ts';
-import {
-  Contract,
-  Created,
-  EnterContest,
-} from '../generated/Contract/Contract';
+import { Contract, Created } from '../generated/Contract/Contract';
 import { Match, EnteredContest } from '../generated/schema';
+import { EnterContest } from '../generated/templates/Matches/Matches';
 
 export function handleCreated(event: Created): void {
   // Entities can be loaded from the store using a string ID; this ID

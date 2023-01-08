@@ -15,15 +15,29 @@ dataSources:
       language: wasm/assemblyscript
       entities:
         - Created
-        - FeeRecipientUpdated
-        - OwnershipTransferred
-        - EnterContest
       abis:
         - name: Contract
           file: ./abis/Contract.json
       eventHandlers:
         - event: Created(indexed uint256,indexed address)
           handler: handleCreated
+      file: ./src/mapping.ts
+templates:
+  - name: Matches
+    kind: ethereum/contract
+    network: matic
+    source:
+      abi: Matches
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      file: ./src/mapping.ts
+      entities:
+        - EnterContest
+      abis:
+        - name: Matches
+          file: ./abis/Matches.json
+      eventHandlers:
         - event: EnterContest(indexed address,uint256,uint256[11])
           handler: handleEnterContest
-      file: ./src/mapping.ts

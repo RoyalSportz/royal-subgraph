@@ -17,30 +17,5 @@
     ],
     "name": "Created",
     "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": true,
-        "internalType": "address",
-        "name": "player",
-        "type": "address"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "amount",
-        "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256[11]",
-        "name": "team",
-        "type": "uint256[11]"
-      }
-    ],
-    "name": "EnterContest",
-    "type": "event"
   }
 ]
