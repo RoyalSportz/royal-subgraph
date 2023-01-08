@@ -1,6 +1,7 @@
 import { BigInt } from '@graphprotocol/graph-ts';
 import { Contract, Created } from '../generated/Contract/Contract';
 import { Match } from '../generated/schema';
+import { Matches } from '../generated/templates';
 
 export function handleCreated(event: Created): void {
   // Entities can be loaded from the store using a string ID; this ID
@@ -21,6 +22,7 @@ export function handleCreated(event: Created): void {
   // entity.i = event.params.id;
   entity.matchAddress = event.params.matchAddress;
   entity.timestamp = event.block.timestamp;
+  Matches.create(event.params.matchAddress);
   // Entity fields can be set based on event parameters
 
   // Entities can be written to the store with `.save()`
