@@ -6,7 +6,7 @@ dataSources:
     name: Contract
     network: matic
     source:
-      address: '0x63F55816361cAd75ea911767B9d5FAFeE40d4291'
+      address: '0xe74C4Ad4888346aae533659Ca7Cf772994fD7dDb'
       abi: Contract
       startBlock: 38631335
     mapping:
