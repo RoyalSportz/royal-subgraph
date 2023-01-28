@@ -5,7 +5,50 @@
       {
         "indexed": true,
         "internalType": "address",
-        "name": "player",
+        "name": "user",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "address[]",
+        "name": "contests",
+        "type": "address[]"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "matchToken",
+        "type": "address"
+      }
+    ],
+    "name": "ClaimFunds",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "user",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "contest",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "indexedMatchToken",
         "type": "address"
       },
       {
@@ -21,7 +64,7 @@
         "type": "uint256[11]"
       }
     ],
-    "name": "EnterContest",
+    "name": "EneteredContest",
     "type": "event"
   }
 ]

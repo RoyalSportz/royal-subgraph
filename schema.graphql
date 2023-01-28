@@ -4,11 +4,33 @@ type Match @entity {
   timestamp: BigInt!
 }
 
-type EnteredContest @entity {
+type ClaimRewards @entity {
   id: ID!
-  player: Bytes! #address
+  user: Bytes! #address
   timestamp: BigInt!
   amount: BigInt!
-  matchAddress: String! #address
+  contest: [Bytes!]!
+  matchToken: Bytes!
+  transactionHash: String!
+}
+
+type EnteredContest @entity {
+  id: ID!
+  user: Bytes! #address
+  timestamp: BigInt!
+  amount: BigInt!
+  matchAddress: Bytes! #address
   team: [BigInt!]!
+  transactionHash: String!
+  indexedMatchToken: Bytes!
+}
+
+type Transaction @entity {
+  id: ID!
+  wallet: String!
+  transactionHash: String!
+  timestamp: BigInt!
+  transactionEvent: String!
+  enterContest: EnteredContest
+  claim: ClaimRewards
 }

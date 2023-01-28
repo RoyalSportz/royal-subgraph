@@ -6,9 +6,9 @@ dataSources:
     name: Contract
     network: matic
     source:
-      address: '0xe74C4Ad4888346aae533659Ca7Cf772994fD7dDb'
+      address: '0x63F55816361cAd75ea911767B9d5FAFeE40d4291'
       abi: Contract
-      startBlock: 37059765
+      startBlock: 38631335
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -39,5 +39,7 @@ templates:
         - name: Matches
           file: ./abis/Matches.json
       eventHandlers:
-        - event: EnterContest(indexed address,uint256,uint256[11])
-          handler: handleEnterContest
+        - event: ClaimFunds(indexed address,address[],uint256,indexed address)
+          handler: handleClaimFunds
+        - event: EneteredContest(indexed address,indexed address,address,uint256,uint256[11])
+          handler: handleEneteredContest
