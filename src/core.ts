@@ -82,7 +82,6 @@ export function handleClaimFunds(event: ClaimFunds): void {
   entity.user = event.params.user;
   entity.amount = event.params.amount;
   entity.timestamp = event.block.timestamp;
-  entity.contest = event.params.contests;
   entity.matchToken = event.params.matchToken;
   entity.transactionHash = event.transaction.hash.toHexString();
   // Entities can be written to the store with `.save()`

@@ -34,7 +34,8 @@ templates:
       language: wasm/assemblyscript
       file: ./src/core.ts
       entities:
-        - EnterContest
+        - ClaimFunds
+        - EneteredContest
       abis:
         - name: Matches
           file: ./abis/Matches.json

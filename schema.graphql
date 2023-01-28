@@ -9,7 +9,6 @@ type ClaimRewards @entity {
   user: Bytes! #address
   timestamp: BigInt!
   amount: BigInt!
-  contest: [Bytes!]!
   matchToken: Bytes!
   transactionHash: String!
 }
