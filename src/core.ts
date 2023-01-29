@@ -24,6 +24,7 @@ export function handleEnterContest(event: EnterContest): void {
   entity.timestamp = event.block.timestamp;
   entity.team = event.params.team;
   entity.matchAddress = event.address.toHexString();
+  entity.transactionHash = event.transaction.hash.toHexString();
   // Entity fields can be set based on event parameters
 
   // Entities can be written to the store with `.save()`

@@ -11,4 +11,5 @@ type EnteredContest @entity {
   amount: BigInt!
   matchAddress: String! #address
   team: [BigInt!]!
+  transactionHash: String!
 }
